@@ -37,7 +37,7 @@ function App() {
     value={todoInput}
     onChange={(e)=>setTodoInput(e.target.value)}
     />
-    <Button type='submit' variant="contained" onClick={addTodo}>Default</Button>
+    <Button type='submit' variant="contained" onClick={addTodo} style={{display:"none"}}>Default</Button>
     </form>
     </div>
   );
