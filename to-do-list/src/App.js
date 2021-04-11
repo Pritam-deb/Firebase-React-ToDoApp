@@ -2,6 +2,10 @@ import './App.css';
 import TextField from '@material-ui/core/TextField';
 import {useState} from "react";
 import { Button } from '@material-ui/core';
+import { db } from './firebase_config';
+import firebase from 'firebase';
+
+
 
 function App() {
   const [todoInput, setTodoInput] = useState('');
@@ -15,7 +19,14 @@ function App() {
 
   const addTodo=(e)=>{
     e.preventDefault();    //prevent from reloading
-    console.log(`You are tryinng to add todo`);
+    // console.log(`You are tryinng to add todo`);
+    db.collection("todo").add({
+      inprogress:true,
+      timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+      todo: todoInput,
+    });
+
+    setTodoInput("")
   }
   //   
   
