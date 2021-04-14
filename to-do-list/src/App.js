@@ -48,10 +48,8 @@ function App() {
 
   return (
 
-    <
-    div className = "App" >
-    <
-    div style = {
+    <div className = "App" >
+    <div style = {
       {
         display: "flex",
         flexDirection: "column",
@@ -59,11 +57,9 @@ function App() {
         alignItems: "center",
       }
     } >
-    <
-    h1 > Your To - Do list < /h1> <
-    form >
-    <
-    TextField id = "standard-basic"
+    <h1 > Your To - Do list </h1> 
+    <form >
+    <TextField id = "standard-basic"
     label = "Write your Task"
     value = {
       todoInput
@@ -77,8 +73,8 @@ function App() {
     onChange = {
       (e) => setTodoInput(e.target.value)
     }
-    /> <
-    Button type = "submit"
+    /> 
+    <Button type = "submit"
     variant = "contained"
     onClick = {
       addTodo
@@ -88,12 +84,10 @@ function App() {
         display: "none"
       }
     } >
-    Default <
-    /Button> <
-    /form>
+    Default </Button> 
+    </form>
 
-    <
-    div style = {
+    <div style = {
       {
         width: "80vw",
         maxWidth: "450px",
@@ -111,10 +105,10 @@ function App() {
         }
         />
       ))
-    } <
-    /div> <
-    /div> <
-    /div>
+    } 
+    </div> 
+    </div> 
+    </div>
   );
 }
 

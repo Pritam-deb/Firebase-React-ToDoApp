@@ -23,34 +23,28 @@ export default function TodoListItem({
     db.collection("todos").doc(id).delete();
   }
 
-  return ( <
-    div style = {
+  return ( <div style = {
       {
         display: "flex"
       }
-    } >
-    <
-    ListItem >
-    <
-    ListItemText primary = {
+    }>
+    <ListItem >
+    <ListItemText primary = {
       todo
     }
     secondary = {
       inprogress ? "In Progress" : "Completed"
     }
-    /> <
-    /ListItem>
+    /> </ListItem>
 
-    <
-    Button onClick = {
+    <Button onClick = {
       toggleInProgress
     } > {
       inprogress ? "Done" : "UnDone"
-    } <
-    /Button> <
-    Button onClick = {
+    } </Button> 
+    <Button onClick = {
       deleteTodo
-    } > X < /Button> <
-    /div>
+    } > X </Button> 
+    </div>
   );
 }
